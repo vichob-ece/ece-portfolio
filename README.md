@@ -155,3 +155,4 @@ Your site will be live at `https://ece-portfolio-yourusername.vercel.app` within
 ## Making Changes After Deployment
 
 Edit files → `git add . && git commit -m "..." && git push` → Vercel redeploys automatically. That's it.
+# ece-portfolio
