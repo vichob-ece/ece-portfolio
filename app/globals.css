@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ── Teal accent system ───────────────────────────────────
+   One place to change the accent color for the whole site.
+   -------------------------------------------------------- */
+:root {
+  --accent:         #0d7a61;   /* primary buttons, active nav, tier-1 borders  */
+  --accent-dark:    #085041;   /* hover state on solid buttons                 */
+  --accent-light:   #e1f5ee;   /* pill backgrounds, card tints, section tints  */
+  --accent-border:  #9fe1cb;   /* outline button borders                       */
+  --accent-text:    #085041;   /* text on --accent-light backgrounds           */
+  --accent-muted:   #0f6e56;   /* active nav link color                        */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ── Teal accent utility classes ───────────────────────── */
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  transition: background 0.15s;
+}
+.btn-accent:hover { background: var(--accent-dark); }
+
+.link-accent {
+  color: var(--accent);
+  transition: opacity 0.15s;
+}
+.link-accent:hover { opacity: 0.75; }
+
+.footer-link {
+  color: #94a3b8;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: var(--accent); }
+
+.contact-link {
+  color: #0f172a;
+  transition: color 0.15s;
+}
+.contact-link:hover { color: var(--accent); }
