@@ -49,7 +49,7 @@ export default function Home() {
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
           </a>
-          <a href="https://github.com/jvichob" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/vichob-ece" target="_blank" rel="noopener noreferrer"
             className="link-accent inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg border"
             style={{ borderColor: "var(--accent-border)" }}>
             GitHub ↗
@@ -130,7 +130,7 @@ export default function Home() {
               Engineering Outreach
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--accent-text)" }}>
-              Through UCSD HKN, I design and deliver hands-on engineering lessons to
+              Through UCSD&apos;s HKN, I design and deliver hands-on engineering lessons to
               K–12 students from underserved communities in the San Diego area.
               The goal is to empower students and expose them to the intriguing world of electrical engineering.
             </p>

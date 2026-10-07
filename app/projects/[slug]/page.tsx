@@ -105,36 +105,39 @@ export default async function ProjectDetail({ params }: PageProps) {
         )}
 
         {/* Gallery */}
+        {project.images && project.images.length > 0 && (
         <Section title="Gallery">
-          {project.images && project.images.length > 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {project.images.map((src, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img key={i} src={src} alt={`${project.title} — figure ${i + 1}`}
-                  className="rounded-lg border border-slate-200 w-full object-cover" />
+          <div className="grid gap-6 sm:grid-cols-2">
+              {project.images.map((image, i) => (
+                <figure key={i}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={image.src}
+                    alt={image.caption ?? `${project.title} — figure ${i + 1}`}
+                    className="rounded-lg border border-slate-200 w-full object-cover"
+                  />
+                  {image.caption && (
+                    <figcaption className="mt-2 text-xs text-slate-600 text-center leading-snug">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </figure>
               ))}
             </div>
-          ) : (
-            <div className="rounded-lg border-2 border-dashed p-8 text-center"
-                 style={{ borderColor: "var(--accent-border)" }}>
-              <p className="text-xs" style={{ color: "var(--accent)" }}>
-                Images and diagrams will appear here.
-              </p>
-              <p className="text-slate-400 text-xs mt-1">
-                Add paths to <code className="font-mono">data/projects.ts</code> under{" "}
-                <code className="font-mono">images: [&quot;/images/...&quot;]</code>
-              </p>
-            </div>
-          )}
-        </Section>
+          </Section>
+        )}
 
         {project.results && (
           <Section title="Results"><p>{project.results}</p></Section>
+        )}
+        {project.status && (
+          <Section title="Current Progress"><p>{project.status}</p></Section>
         )}
         {project.keyTakeaways && (
           <Section title="Key Takeaways"><p>{project.keyTakeaways}</p></Section>
         )}
         
+        {project.report && (
         <a href="/public/files" target="_blank" rel="noopener noreferrer"
           className="btn-accent inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg">
           Download Report
@@ -143,7 +146,7 @@ export default async function ProjectDetail({ params }: PageProps) {
               d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
         </a>
-        
+        )}
       </div>
 
       {/* Prev / Next navigation */}

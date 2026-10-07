@@ -15,7 +15,6 @@ export default function Projects() {
     <div className="max-w-5xl mx-auto px-6 pt-14 pb-20">
       <SectionHeading
         title="Projects"
-        subtitle="Organized by area. Tier 1 projects have the most detailed write-ups."
       />
 
       <div className="space-y-16">

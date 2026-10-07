@@ -13,10 +13,11 @@ const typeBadgeColors: Record<string, string> = {
   Research:           "bg-violet-50 text-violet-700 ring-violet-200",
   "Personal Project": "bg-amber-50 text-amber-700 ring-amber-200",
   "Team Project":     "bg-rose-50 text-rose-700 ring-rose-200",
+  "Ongoing":          "bg-orange-50 text-orange-700 ring-orange-200",
 };
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const badgeClass = typeBadgeColors[project.type] ?? "bg-slate-50 text-slate-600 ring-slate-200";
+ //const badgeClass = typeBadgeColors[project.type[0]] ?? "bg-slate-50 text-slate-600 ring-slate-200";
   const tier1Style = project.tier === 1
     ? { borderLeft: "2px solid var(--accent)", borderRadius: "0 12px 12px 0" }
     : {};
@@ -29,10 +30,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         className="group block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-sm transition-all"
         style={tier1Style}
       >
-        <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ring-1 ${badgeClass}`}>
-          {project.type}
-        </span>
-
+        <div className="flex flex-wrap gap-1.5">
+         {project.type.map((t) => (
+          <span key={t}
+            className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ring-1 ${typeBadgeColors[t] ?? "bg-slate-50 text-slate-600 ring-slate-200"}`}>
+            {t}
+          </span>
+          ))}
+        </div>
+        
         <h3 className="mt-3 text-base font-semibold text-slate-900 group-hover:text-slate-700 transition-colors leading-snug">
           {project.title}
         </h3>

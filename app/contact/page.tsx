@@ -2,7 +2,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 const contactLinks = [
   { label: "Email", value: "jvichob@ucsd.edu", href: "mailto:jvichob@ucsd.edu", description: "Best for internship inquiries and research opportunities." },
-  { label: "GitHub", value: "github.com/jvichob", href: "https://github.com/jvichob", description: "Source code for projects and lab work." },
+  { label: "GitHub", value: "github.com/vichob-ece", href: "https://github.com/vichob-ece", description: "Source code for projects and lab work." },
   { label: "LinkedIn", value: "linkedin.com/in/jaden-vichob", href: "https://linkedin.com/in/jaden-vichob", description: "Professional background and connection requests." },
 ];
 

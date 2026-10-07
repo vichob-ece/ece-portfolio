@@ -17,15 +17,22 @@ const skills = [
     group: "CAD",
     items: ["Fusion 360", "Onshape"],
   },
+  {
+    group: "Robotics & Autonomous Systems",
+    items: ["ROS", "Linux", "Python", "Control Systems", "Mechatronics"],
+  }
 ];
 
 const coursework = [
   "Physical & Fourier Optics",
   "Fundamentals of Devices & Materials",
   "Electronic Materials Science of ICs",
+  "Semiconductor Physics",
   "Electronic Circuits and Systems",
+  "Introduction to Active Circuit Design",
   "Advanced Digital Design Project",
   "Introduction to Deep Learning",
+  "Introduction to Autonomous Vehicles",
   "Quantum Physics",
   "Electromagnetism",
 ];
@@ -34,8 +41,8 @@ const coursework = [
 // Lion dance: paste a YouTube embed URL (not the watch URL).
 // Format: https://www.youtube.com/embed/VIDEO_ID
 const LION_DANCE_VIDEO_URL = "https://www.youtube.com/embed/YOUR_VIDEO_ID";
-const LION_DANCE_DESCRIPTION =
-  "Replace this with a short paragraph about your lion dance experience — performances you've led, events you've done, what the club means to you, etc.";
+//const LION_DANCE_DESCRIPTION =
+  //"Replace this with a short paragraph about your lion dance experience — performances you've led, events you've done, what the club means to you, etc.";
 
 // HKN outreach: add paths to images inside /public/images/
 // e.g. "/images/hkn-classroom.jpg"
@@ -43,8 +50,8 @@ const HKN_IMAGES: string[] = [
   "/images/hkn-placeholder-1.jpg",
   "/images/hkn-placeholder-2.jpg",
 ];
-const HKN_DESCRIPTION =
-  "Replace this with a short paragraph about the HKN outreach lessons — what you built, who you taught, what the goal was.";
+//const HKN_DESCRIPTION =
+  //"Replace this with a short paragraph about the HKN outreach lessons — what you built, who you taught, what the goal was.";
 // ────────────────────────────────────────────────────────────
 
 export default function About() {
@@ -86,23 +93,26 @@ export default function About() {
             In the winter quarter of my first year, I attended a guest lecture by a senior
             principal engineer at Intel on gate-all-around CMOS. I could barely follow the
             physics being discussed. But I left with unusual clarity: at the nanoscale, the
-            primary engineering challenges aren&apos;t circuits — they&apos;re materials and
-            physics. That&apos;s exactly where I wanted to focus.
+            primary engineering challenges aren&apos;t purely circuits, but materials and
+            physics. That nucleation point defined my academic focus.
           </p>
           <p>
-            From there, my coursework built deliberately toward the physical foundations of
-            semiconductor devices — quantum mechanics, carrier statistics, fabrication
-            processes. Concurrently, I took physical and Fourier optics, which opened a
-            different direction: wave propagation, spatial frequency analysis, and the
-            design of imaging systems. The two areas converged naturally on optoelectronics,
-            where semiconductor devices and photonics intersect.
+            My coursework has been designed to build a strong foundation in both the theoretical 
+            and practical aspects of semiconductor devices, including quantum mechanics, electronic
+            materials science, and semiconductor physics. Concurrently, I took Physical and Fourier 
+            Optics, opening a different direction in wave propogation and light-matter interactions.
+            These two areas converged naturally on optoelectronics, where semiconductor devices and 
+            photonics intersect.
+            
           </p>
           <p>
             I am most engaged when working on problems where the physics directly constrains
             the engineering. In the optics lab, that meant measuring whether a lens system
             actually reaches the Rayleigh diffraction limit. In digital design, it meant
-            characterizing precisely where a Viterbi decoder breaks under noise. I prefer
-            to understand why something works the way it does, not just that it does.
+            characterizing precisely where a Viterbi decoder breaks under noise. In robotics,
+            it meant optimizing ROS2 algorithms and ML control systems to operate at peak performance.
+            Whether I am chracterizing a photodiode, verifying an FPGA module, or tuning a control loop,
+            I prefer to understand the underlying mechanisms of a system, not just its observable behavior.
           </p>
         </div>
 
@@ -164,7 +174,12 @@ export default function About() {
 
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <p className="text-sm text-slate-600 leading-relaxed">
-              {LION_DANCE_DESCRIPTION}
+              For the past ten years, Kung Fu and Chinese Lion Dance have been integral parts of my life, teching me the value of long-term commitment and high-level performacne under pressure.
+              I have competed in multiple Kung Fu tournaments, with my best performance achieved in a national championship round, tying for fifth place in a competitive group of 15, with an overall attendance of over 500 competitors.
+              <br></br><br></br>
+              Beyond competition, I participate annualy in numerous cultural and personal events, performing Lion dance to celebrate various occasions and bring good luck to the community.
+              Through dedication to these disciplines, I have grown into an assistant instructor, where I play a key leadership role.
+              In this capacity, I lead practices, mentor newer students, and collaborate directly with the primary instructor and group leader to plan performances and manage logistics.
             </p>
 
             {/* YouTube embed — replace LION_DANCE_VIDEO_URL above */}
@@ -172,7 +187,7 @@ export default function About() {
               <iframe
                 src={LION_DANCE_VIDEO_URL}
                 title="Kung Fu and Lion Dance"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               />
@@ -184,12 +199,18 @@ export default function About() {
         <div id="outreach" className="scroll-mt-24">
           <p className="text-xs font-semibold tracking-widest uppercase mb-4"
              style={{ color: "var(--accent)" }}>
-            HKN Engineering Outreach
+            Engineering Outreach
           </p>
 
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <p className="text-sm text-slate-600 leading-relaxed">
-              {HKN_DESCRIPTION}
+              My own interest in engineering began entirely through personal ventures and projects. In my K-12 education, I had no formal exposure to the field, but I was always curious about how things worked. 
+              This gap motivated me to join UCSD&apos;s Eta Kappa Nu (HKN) engineering outreach programs, where I worked in small groups to design and deliver hands-on electrical engineering lessons for socioeconomically disadvantaged K-12 students across San Diego.
+              My goal is to provide the early exposure I lacked and hopefully inspire younger students to explore engineering.
+              <br></br><br></br>
+              I soon found myself drawn to the collaborative nature of the work and the opportunity to make a meaningful impact in the community, leading me to participate in more outreach initiatives.
+              During the summer of 2026, I participated in a more intensive outreach program, where I had the opportunity to work closely with my professor and peers to educate COSMOS students studying at UCSD.
+              I also have plans to lead future workshops and outreach lessons through UCSD&apos;s Project in a Box, which develops small, accessible engineering kits for educational purposes.
             </p>
 
             {/* Outreach photos — add real paths to HKN_IMAGES above */}
