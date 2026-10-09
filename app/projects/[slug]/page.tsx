@@ -39,7 +39,7 @@ export default async function ProjectDetail({ params }: PageProps) {
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xs font-semibold tracking-widest uppercase"
                 style={{ color: "var(--accent)" }}>
-            {project.type}
+            {project.types[0]}
           </span>
           {project.tier === 1 && (
             <span className="text-xs font-medium px-2 py-0.5 rounded-full"
@@ -52,6 +52,13 @@ export default async function ProjectDetail({ params }: PageProps) {
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 leading-snug">
           {project.title}
         </h1>
+
+        {project.date && (
+          <p className="text-xs text-slate-400 mt-1">
+            {project.date}{project.dateEnd ? ` — ${project.dateEnd}` : ""}
+          </p>
+          )}
+
         <p className="mt-3 text-slate-500 text-sm leading-relaxed max-w-xl">
           {project.summary}
         </p>
@@ -138,7 +145,7 @@ export default async function ProjectDetail({ params }: PageProps) {
         )}
         
         {project.report && (
-        <a href="/public/files" target="_blank" rel="noopener noreferrer"
+        <a href={project.report} target="_blank" rel="noopener noreferrer"
           className="btn-accent inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg">
           Download Report
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

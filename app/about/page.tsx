@@ -3,14 +3,14 @@ import SectionHeading from "@/components/SectionHeading";
 const skills = [
   {
     group: "Hardware & Lab",
-    items: ["PCB (KiCAD)", "Oscilloscope", "Soldering", "Optical Bench", "Breadboarding", "Arduino"],
+    items: ["PCB Design (KiCAD)", "Soldering", "Optical Alignment & Testing", "Arduino", "Raspberry Pi", "FPGA Prototyping", "Oscilloscopes", "Signal Generators"],
   },
   {
     group: "Design & Simulation",
-    items: ["Ansys Zemax", "LTspice", "PSpice", "AMD Vivado", "Intel Quartus", "ModelSim"],
+    items: ["Zemax OpticStudio", "LTspice", "PSpice", "AMD Vivado", "Quartus Prime", "ModelSim"],
   },
   {
-    group: "Programming",
+    group: "Programming & Libraries",
     items: ["SystemVerilog", "Python", "MATLAB", "C", "C++", "NumPy", "PyTorch"],
   },
   {
@@ -19,7 +19,7 @@ const skills = [
   },
   {
     group: "Robotics & Autonomous Systems",
-    items: ["ROS", "Linux", "Python", "Control Systems", "Mechatronics"],
+    items: ["ROS 2", "Linux", "Control Systems", "Computer Vision", "Sensor Fusion"],
   }
 ];
 

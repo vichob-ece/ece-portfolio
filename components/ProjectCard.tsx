@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         style={tier1Style}
       >
         <div className="flex flex-wrap gap-1.5">
-         {project.type.map((t) => (
+         {project.types.map((t) => (
           <span key={t}
             className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ring-1 ${typeBadgeColors[t] ?? "bg-slate-50 text-slate-600 ring-slate-200"}`}>
             {t}
@@ -42,6 +42,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="mt-3 text-base font-semibold text-slate-900 group-hover:text-slate-700 transition-colors leading-snug">
           {project.title}
         </h3>
+
+        {project.date && (
+          <p className="mt-1 text-xs text-slate-400">
+            {project.date}{project.dateEnd ? ` — ${project.dateEnd}` : ""}
+          </p>
+        )}
 
         <p className="mt-2 text-sm text-slate-500 leading-relaxed">{project.summary}</p>
 

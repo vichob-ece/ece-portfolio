@@ -7,9 +7,9 @@ const interests = [
   "Semiconductor Devices",
   "Optical Imaging",
   "Photonics",
-  "FPGA Design",
   "Optoelectronics",
   "Electronic Materials",
+  "Robotics",
 ];
 
 export default function Home() {
